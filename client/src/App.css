@@ -1,0 +1,142 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  user-select: none;
+}
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../public/images/bg.jpg');
+   background-size: cover;
+
+overflow: hidden;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+* {
+  color: BLACK;
+}
+
+/*-------- App Css --------*/
+p {
+  color: white;
+}
+.container {
+  width: 60vw;
+  height: 80vh;
+  margin: auto;
+  top: 50vh;
+  margin-top: -40vh;
+
+  background: rgba(26, 22, 22, 0.438);
+  position: relative;
+  backdrop-filter: blur(60px);
+  border-radius: 5px;
+  display: grid;
+}
+.cupsCount {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+
+  color: white;
+  display: grid;
+  padding: 0;
+  grid-template-rows: 10% 60% 10%;
+}
+.countWrapper {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.counts {
+  margin: auto;
+  width: 70%;
+  height: 60%;
+  
+   text-align: center;
+   background: rgba(70, 61, 61, 0.199);
+   display: grid;
+   grid-template-rows: 70% 30%;
+   text-align: center;
+   align-items: center;
+   border-radius: 3%;
+   
+}
+.counts:hover {
+  background: rgba(94, 93, 93, 0.363);
+}
+.cupsDetails {
+  margin: auto;
+  text-align: center;
+  padding: 1%;
+  border-radius: 7%;
+
+}
+.cupsDetails:hover {
+  cursor: pointer;
+  background-color: rgba(224, 221, 221, 0.082);
+  
+}
+.countTxt {
+  font-size: 4em;
+  font-weight: 800;
+  margin-bottom: 0%;
+}
+.ctxt {
+  font-weight: 100;
+  font-size: .9em;
+}
+.cupsDateCurrent {
+  text-align: center;
+  font-weight: 10;
+  font-size: .8em;
+  
+  
+
+  
+margin: auto;
+}
