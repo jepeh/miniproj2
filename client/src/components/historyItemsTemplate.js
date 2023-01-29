@@ -13,6 +13,18 @@ showSelectedHistory(){
     popUpData.className = 'popUpData'
     var cover = document.createElement('div')
     cover.className = 'cover'
+
+    var closePopUp = document.createElement('p')
+    closePopUp.className = 'closePopUp'
+    closePopUp.innerText = 'EXIT'
+    closePopUp.addEventListener('click', ()=>{
+        //close popups
+        //clear thee popdata body to refresh data
+        $('.popUpData, .cover').hide()
+        $('.popUpDataBody').html('')
+    })
+    popUpData.append(closePopUp)
+
     $('body').append(cover)
     $('body').append(popUpData)
 }
@@ -156,8 +168,4 @@ var remarks = remarksTally > 0 || remarksTally < 0 ? "red" : "green"
     getHistory(){
         return this.history
     }
-}
-
-window.gaga = function(){
-    alert(true)
 }
