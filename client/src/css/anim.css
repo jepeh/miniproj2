@@ -1,0 +1,17 @@
+@keyframes closeHome {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.09);
+    }
+}
+
+@keyframes pop {
+    from {
+        transform: scale(.1);
+    }
+    to {
+        transform: scale(1)
+       }
+}

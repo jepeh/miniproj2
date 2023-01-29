@@ -1,12 +1,25 @@
 import React from 'react'
-import "../animations/anim.css"
+import "../css/anim.css"
+import $ from 'jquery'
 
-const closeHome = function() {
-    
-}
+class HomeComponent extends React.Component {
 
-class Home extends React.Component {
+   
+    closeHome(ee) {
+        
+        $(".cupsCount").css("transform", "scale(0)")
+        var t = setTimeout(() => {
+            $(".cupsCount").remove()
+            // Append Dashboard Elements
+            $('.dashboard').css({
+                display: 'grid'
+            })
+            clearTimeout(t)
+        }, 450);
+    }
+  
     render() {
+        
         return (
             <div className='cupsCount'>
                 <p className='cupsDateCurrent'>as of January 27, 2023</p>
@@ -21,7 +34,7 @@ class Home extends React.Component {
             <p className='cupTxt ctxt'>16oz Hot</p>
         </div>
         </div>
-       <p className='cupsDetails' onClick={closeHome}>See Details</p>
+       <p className='cupsDetails' onClick={this.closeHome}>See Details</p>
       </div>
            
         )
@@ -29,4 +42,4 @@ class Home extends React.Component {
 }
 
 
-export default Home;
+export default HomeComponent;

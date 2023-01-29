@@ -62,17 +62,21 @@ p {
   color: white;
 }
 .container {
-  width: 60vw;
+  width: 70vw;
   height: 80vh;
   margin: auto;
   top: 50vh;
   margin-top: -40vh;
-
+  padding: 0;
   background: rgba(26, 22, 22, 0.438);
   position: relative;
   backdrop-filter: blur(60px);
-  border-radius: 5px;
+  border-radius: 10px;
+  overflow: hidden;
   display: grid;
+}
+.container::-webkit-scrollbar {
+  display: none;
 }
 .cupsCount {
   margin: auto;
@@ -83,7 +87,9 @@ p {
   display: grid;
   padding: 0;
   grid-template-rows: 10% 60% 10%;
+  transition: all .8s cubic-bezier(0.19, 1, 0.22, 1);
 }
+
 .countWrapper {
   width: 100%;
   height: 100%;
@@ -104,10 +110,12 @@ p {
    text-align: center;
    align-items: center;
    border-radius: 3%;
+   transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
    
 }
 .counts:hover {
   background: rgba(94, 93, 93, 0.363);
+  transform: scale(1.05);
 }
 .cupsDetails {
   margin: auto;
@@ -122,21 +130,27 @@ p {
   
 }
 .countTxt {
-  font-size: 4em;
+  font-size: 4.5vw;
   font-weight: 800;
   margin-bottom: 0%;
+  color: rgba(241, 236, 236, 0.781);
 }
 .ctxt {
   font-weight: 100;
-  font-size: .9em;
+  font-size: 1.5vw;
+  margin: auto;
+  margin-top: -5%;
 }
 .cupsDateCurrent {
   text-align: center;
-  font-weight: 10;
-  font-size: .8em;
-  
+  font-weight: 1;
+  font-size: 1vw;
+  color: rgba(243, 238, 238, 0.514);
   
 
   
 margin: auto;
+}
+.dashboard {
+  display: none;
 }
