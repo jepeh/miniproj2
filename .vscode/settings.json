@@ -1,0 +1,15 @@
+{
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "pretty-formatter.braceLine": true,
+    "pretty-formatter.bracePadding": true,
+    "pretty-formatter.braces": true,
+    "pretty-formatter.commentLine": true,
+    "pretty-formatter.comments": true,
+    "pretty-formatter.compressedCss": true,
+    "pretty-formatter.correct": true,
+    "pretty-formatter.cssInsertLines": true,
+    "pretty-formatter.elseLine": true,
+    "pretty-formatter.functionName": true
+}

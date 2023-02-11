@@ -1,0 +1,44 @@
+@import url('../App.css');
+
+.sideBar {
+    margin: auto;
+    
+    width: 100%;
+    height: 90%;
+    display: grid;
+    grid-template-rows: 30% 60%;
+    border-right: .3px solid rgba(255, 255, 255, 0.13);
+}
+.logo {
+    margin: auto;
+    width: 70%;
+    
+    margin-top: -15%;
+    opacity: .8;
+}
+.navlink {
+    display: block;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.748);
+    font-size: 1.1vw;
+    text-decoration: none;
+    width: 70%;
+    margin: auto;
+  margin-top: 6%;
+    padding: 4%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: .5vw;
+    
+    font-weight: 200;
+    transition: all .2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.navlink:hover {
+    transform: scale(1.09); 
+     background-color: rgba(58, 57, 57, 0.247);
+}
+.navlink.active {
+      background-color: rgba(58, 57, 57, 0.247);
+      transform: scale(1.09);
+      color: rgba(255, 187, 0, 0.61);
+}

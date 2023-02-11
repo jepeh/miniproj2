@@ -1,0 +1,14 @@
+{
+ "desais": [
+    {
+        "ID": 123456,
+        "date": "January 1 - January 7",
+        "cupsInfo": {
+            "sales": 100,
+            "gp": 90,
+            "beg": 1000,
+            "endCount": 810
+        }
+    }
+ ]   
+}

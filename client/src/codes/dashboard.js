@@ -1,10 +1,3 @@
-import DashboardContainer  from "../components/dashboardComponents.js"
-
-function appendDashboard() {
-
-        return (
-            <DashboardContainer />
-        )
+export default function updatePopUpSelectedData (data){
+        
 }
-
-export default appendDashboard

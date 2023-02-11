@@ -2,31 +2,9 @@ import React from 'react'
 import '../App.css'
 import '../css/dashboard.css'
 import $ from 'jquery'
-import HistoryItems from './historyItemsTemplate.js'
+import ItemsHistory from './historyItemsTemplate.js'
 
-function refreshHistory() {
-    for (var i=0; i<=10; i++) {
-       
-            
-        var item = new HistoryItems({
-            id: "HI123",
-            date: 'Jan 22-Jan 30',
-            cupsInfo: {
-                sales: 100,
-                gp: 100,
-                beg: 1000,
-                endCount: 800
-            }
-        })
-        
-        item.generateHistory()
-        var itemDiv = item.getHistory()
-    
-        $(".dashBody").append(itemDiv)
-    
-    }
-}
-// mao
+
 
 function showLegends(e){
     e.preventDefault();
@@ -67,33 +45,72 @@ function hideLegends(){
     $('.legendsDivPop').hide()
 }
 
-class DashboardContainer extends React.Component {
 
-render () {
+class DashboardContainer extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            history: []
+        }
+
+
+        
+    }
+    
+    retrieveHistory() {
+        var cuptype = this.props.cup
+
+        if (cuptype === 'desais') {
+                
+            // fetch desais history json file
+           
+
+        } else if (cuptype === 'dose') {
+            
+            // fetch desais history json file
+        }
+
+    }
+
+
+    render() {
+    
+        this.retrieveHistory()
+        
     return(
-      <div className='dashboard'>
-        <div className='navigation'>
+        
+        <div className='db'>
+            <div className='navigation'>
             <p className='navs'>History</p>
-            <p className='navs'>Purchase</p>
+            <p className='navs'>Backup</p>
             <p className='navs'>Documentations</p>
-        </div>
-        <div className='legends'>
-            <p></p>
+            </div>
+            <div className='legends'>
+                <p></p>
             <div className='legendsDiv'>
                 <div className='dot dotBal'></div>
                 <p className='legendsTxt'>Balanced</p>
             </div>
             <div className='legendsDiv'>
                 <div className='dot'></div>
-                <p className='legendsTxt'>Descrepancy</p>
+                <p className='legendsTxt'>Discrepancy</p>
+            </div>
+            <div className='legendsDiv'>
+                <div className='dot dottraced'></div>
+                <p className='legendsTxt'>Traced Discrepancy</p>
             </div>
             <p className='addnewhistory'>Add New</p>
-        </div>
-        <div className='dashBody' id="dashb">
-        
-
-        </div>
-        <div className='itemLegends'>
+            </div>
+            <div className='dashBody' id="dashb">
+                {
+                    this.state.history.map((p, i) => {
+                        return (
+                            <ItemsHistory key={i} cups={p} />
+                    )
+                })
+                }
+            </div>
+             <div className='itemLegends'>
             <div></div>
             <p className='itemL sales' onMouseOver={showLegends} onMouseLeave={hideLegends}>Sales / Dine</p>
             <p className='itemL gp' onMouseOver={showLegends} onMouseLeave={hideLegends}>Grab & Panda</p>
@@ -101,9 +118,11 @@ render () {
             <p className='itemL ac' onMouseOver={showLegends} onMouseLeave={hideLegends}>End Count</p>
             <div></div>
         </div>
-      </div>           
+        </div>
     )
 }
 }
 
-export {refreshHistory, DashboardContainer}
+
+
+export { DashboardContainer}
