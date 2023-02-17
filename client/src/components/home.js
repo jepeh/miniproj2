@@ -39,7 +39,7 @@ class Home extends React.Component {
                   
 
           <div className='totalUsedMetricsDiv'>
-          <p className='totalUsedCounts'>Total used 345 | 76%</p>
+          <p className='totalUsedCounts'>Total used 345 | 26%</p>
           <div className='totalUsedMetricsBar'>
             <div className='totalUsedMetricsBarChild bar-ice'></div>
           </div>
@@ -55,7 +55,7 @@ class Home extends React.Component {
         <div className='countsLine'></div>
             <p className='cupTxt ctxt'>12Oz HOT</p>
             <div className='totalUsedMetricsDiv'>
-          <p className='totalUsedCounts'>Total used 204 | 80%</p>
+          <p className='totalUsedCounts'>Total used 204 | 34%</p>
           <div className='totalUsedMetricsBar'>
             <div className='totalUsedMetricsBarChild bar-hot'></div>
           </div>
@@ -74,7 +74,7 @@ class Home extends React.Component {
                   fontSize: '1.2vw',
                   fontWeight: '400',
                   opacity: '.5'
-                }}> | DAILY TARGET SALES</p>
+                }}> | PREVIOUS WEEK CUP SALES</p>
                 <div id='downChart' className='analyticsDown analytics'>
                   
                   <DownChart/>

@@ -6,7 +6,7 @@ class downChart extends React.Component {
    
     option = {
         xAxis: {
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
         },
         tooltip: {
             trigger: 'item'
@@ -21,11 +21,11 @@ class downChart extends React.Component {
         series: [
             {
                 type: 'bar',
-                data: [60, 30,40,56,45,34]
+                data: [60, 30,40,56,45,34, 23]
             },
             {
                 type: 'bar',
-                data: [23,23,54,64,75,86]
+                data: [23,23,54,64,75,86, 58]
             },
         ]
     }
@@ -69,26 +69,26 @@ class pieChart extends React.Component {
       type: 'pie',
             data: [
                 {
-                    value: 20,
+                    value: 60,
                     name: 'Dine'
                 }, {
-                    value: 80,
+                    value: 40,
                     name: 'Panda'
                 }, {
-                    value: 30,
+                    value: 35,
                     name: 'Grab Food'
                 },
                 {
-                    value: 30,
+                    value: 20,
                     name: "Takeout"
                 },
                 {
-                    value: 50,
-                    name: 'gege'
+                    value: 10,
+                    name: 'damaged'
                 },
                 {
-                    value: 5,
-                    name: 'herer'
+                    value: 15,
+                    name: 'discrepancy'
                 }
             ].sort(function (a, b) {
         return a.value - b.value;

@@ -21,7 +21,7 @@ export default class Sidebar extends React.Component {
                         <NavLink className="navlink" exact="true" to="/" onClick={this.refresh}>Home</NavLink>
                         <NavLink className="navlink" to="/desais" onClick={this.refresh}>Desais - Ice</NavLink>
                         <NavLink className="navlink" to="/dose" onClick={this.refresh}>Dose - Hot</NavLink>
-                        <NavLink className="navlink" to="/performance" onClick={this.refresh}>Performance</NavLink>
+                        <NavLink className="navlink" to="/weekly" onClick={this.refresh}>Weekly Cups</NavLink>
                         <NavLink className="navlink" to="/docs" onClick={this.refresh}>Documentation</NavLink>
                     </Router>
                     

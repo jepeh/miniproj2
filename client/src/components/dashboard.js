@@ -3,6 +3,9 @@ import '../App.css'
 import '../css/dashboard.css'
 import $ from 'jquery'
 import ItemsHistory from './historyItemsTemplate.js'
+import cupDataDesais from '../jsons/desaisCupsHistory.json'
+import cupDataDose from '../jsons/doseCupsHistory.json'
+import cupDataWeekly from '../jsons/weeklyCupsHistory.json'
 
 
 
@@ -49,41 +52,60 @@ function hideLegends(){
 class DashboardContainer extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            history: []
-        }
-
-
         
     }
-    
-    retrieveHistory() {
-        var cuptype = this.props.cup
+  
+    history = []
 
-        if (cuptype === 'desais') {
-                
-            // fetch desais history json file
-           
-
-        } else if (cuptype === 'dose') {
-            
-            // fetch desais history json file
-        }
-
+    addnew() {
+        $('.addnewpop, .cover').css("display", "grid")
+        $('.canceladdnew').on('click', () => {
+            $('.cover, .addnewpop').hide()
+        })
     }
-
 
     render() {
     
-        this.retrieveHistory()
+        var cuptype = this.props.cup
+        var weekly = false
+
+        if (cuptype === 'desais') {
+            
+            // fetch desais history json file
+            cupDataDesais.desais.map((data, i) => {
+               
+                this.history.push(data)
+
+            })
+         } else if (cuptype === 'dose') {
+            
+            // fetch desais history json file
+            cupDataDose.dose.map((data, i) => {
+               
+                this.history.push(data)
+
+            })
+
+        }
+        else if(cuptype === "weekly") {
+            weekly = true
+              cupDataWeekly.weekly.map((data, i) => {
+               
+                this.history.push(data)
+
+            })
+
+        }
+
+
         
     return(
         
         <div className='db'>
             <div className='navigation'>
             <p className='navs'>History</p>
-            <p className='navs'>Backup</p>
-            <p className='navs'>Documentations</p>
+            <p className='navs'></p>
+            <p className='navs'></p>
             </div>
             <div className='legends'>
                 <p></p>
@@ -98,16 +120,23 @@ class DashboardContainer extends React.Component {
             <div className='legendsDiv'>
                 <div className='dot dottraced'></div>
                 <p className='legendsTxt'>Traced Discrepancy</p>
-            </div>
-            <p className='addnewhistory'>Add New</p>
+                </div>
+                {
+                    !weekly ? 
+                        <p className='addnewhistory' onClick={this.addnew}>Add New</p> :
+                        <p className='addnewhistory' style={{
+                            opacity: .7
+                        }}>weekly inventory is automatic</p>
+                }
+                
             </div>
             <div className='dashBody' id="dashb">
                 {
-                    this.state.history.map((p, i) => {
+                    this.history.map((data, i) => {
                         return (
-                            <ItemsHistory key={i} cups={p} />
-                    )
-                })
+                            <ItemsHistory key={i} cups={data} type={ data.type} />
+                       )
+                   })
                 }
             </div>
              <div className='itemLegends'>
@@ -117,8 +146,10 @@ class DashboardContainer extends React.Component {
             <p className='itemL beg' onMouseOver={showLegends} onMouseLeave={hideLegends}>Beginning</p>
             <p className='itemL ac' onMouseOver={showLegends} onMouseLeave={hideLegends}>End Count</p>
             <div></div>
+            </div>
+          
         </div>
-        </div>
+    
     )
 }
 }

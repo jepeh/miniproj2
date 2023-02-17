@@ -27,7 +27,7 @@ export default class Container extends React.Component {
             <Route exact="true" path="/" element={<Home />}></Route>
               <Route path="/desais" element={<DashBoard cup="desais"/>}></Route>
               <Route path="/dose" element={<DashBoard cup="dose" />}></Route>
-             <Route path="/performance" element={<Home/>}></Route>
+             <Route path="/weekly" element={<DashBoard cup="weekly"/>}></Route>
              <Route path="/docs" element={<Home />}></Route>        
           </Routes>
           </Router>

@@ -31,39 +31,61 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div class="cover"></div>
+    <div class="addnewpop">
+      <p>Add New Cup Daily Inventory</p>
+      <div class="addnewdiv">
+        <input class="addinputs" type="text" placeholder="Date">
+         <input class="addinputs" type="text" placeholder="Cashier">
+          <input class="addinputs" type="text" placeholder="Grab Number">
+           <input class="addinputs" type="text" placeholder="Panda Number">
+            <input class="addinputs" type="text" placeholder="Beginning">
+             <input class="addinputs" type="text" placeholder="Sales">
+              <input class="addinputs" type="text" placeholder="Grab">
+               <input class="addinputs" type="text" placeholder="Panda">
+                <input class="addinputs" type="text" placeholder="Ending">
+                 <input class="addinputs" type="text" placeholder="Note">
+      </div>
+      <p class="addnewbutton">Add</p>
+      <p class="canceladdnew">cancel</p>
+    </div>
     <div class="popUpData">
       <div class="PPHeader">
-      <p class="PPDate">January 1 - January 7</p>
+      <p class="PPDate"></p>
       <p class="closePopUp">Exit</p>
 </div>
       <div class="PPBody">
         <div class="PPBodyData">
           <div class="PPBodyDataLeft PPBodyDataDates">
-                <div class="PPBodyDataDatesListDiv">
-                  <div class="dailyRemarks"></div>
-                  <p class="PPBodyDatesText">January 1</p></div>
-                <div class="PPBodyDataDatesListDiv">
-                  <div class="dailyRemarks"></div>
-                  <p class="PPBodyDatesText">January 1</p></div>
-                <div class="PPBodyDataDatesListDiv">
-                  <div class="dailyRemarks"></div>
-                  <p class="PPBodyDatesText">January 1</p></div>
-                <div class="PPBodyDataDatesListDiv">
-                  <div class="dailyRemarks"></div>
-                  <p class="PPBodyDatesText" >January 1</p></div>
-                <div class="PPBodyDataDatesListDiv">
-                  <div class="dailyRemarks"></div>
-                  <p class="PPBodyDatesText">January 1</p></div>
-                <div class="PPBodyDataDatesListDiv">
-                  <div class="dailyRemarks"></div>
-                  <p class="PPBodyDatesText">January 1</p></div>
-                <div class="PPBodyDataDatesListDiv">
-                  <div class="dailyRemarks"></div>
-                  <p class="PPBodyDatesText">January 1</p></div>
+                <div class="PPBodyDataDatesListDiv date0">
+                  <div class="dailyRemarks DR0"></div>
+                  <p class="PPBodyDatesText ddate0"></p></div>
+                <div class="PPBodyDataDatesListDiv date1">
+                  <div class="dailyRemarks DR1"></div>
+                  <p class="PPBodyDatesText ddate1"></p></div>
+                <div class="PPBodyDataDatesListDiv date2">
+                  <div class="dailyRemarks DR2"></div>
+                  <p class="PPBodyDatesText ddate2"></p></div>
+                <div class="PPBodyDataDatesListDiv date3">
+                  <div class="dailyRemarks DR3"></div>
+                  <p class="PPBodyDatesText ddate3" ></p></div>
+                <div class="PPBodyDataDatesListDiv date4">
+                  <div class="dailyRemarks DR4"></div>
+                  <p class="PPBodyDatesText ddate4"></p></div>
+                <div class="PPBodyDataDatesListDiv date5">
+                  <div class="dailyRemarks DR5"></div>
+                  <p class="PPBodyDatesText ddate5"></p></div>
+                <div class="PPBodyDataDatesListDiv date6">
+                  <div class="dailyRemarks DR6"></div>
+                  <p class="PPBodyDatesText ddate6"></p>
+                </div>
+                <div class="PPBodyDataDatesListDiv date7">
+                  <div class="dailyRemarks DR7"></div>
+                  <p class="PPBodyDatesText ddate7"></p>
+                </div>
 
           </div>
           <div class="PPBodyDataRight">
-            <p class="DataRightHeaderDate">January 2</p>
+            <p class="DataRightHeaderDate"></p>
             <div class="statsList">
               <p>Beg</p>
               <p>Sales</p>
@@ -74,18 +96,38 @@
               <p>Variant</p>
             </div>
             <div class="salesList">
-              <p>234</p>
-              <p>234</p>
-              <p>654</p>
-              <p>56</p>
-              <p>78</p>
-              <p>567</p>
-              <p>0</p>
+              <p id="DDBeg"></p>
+              <p id="DDSales"></p>
+              <p id="DDGrab"></p>
+              <p id="DDPanda"></p>
+              <p id="DDTotal"></p>
+              <p id="DDEnd"></p>
+              <p id="DDVariant"></p>
             </div>
             <div class="DataLine"></div>
+            <div class="DDAnalytics">
+              <div></div>
+              <div class="salesData salesDataSales"></div>
+              <div class="salesData salesDataGrab"></div>
+              <div class="salesData salesDataPanda"></div>
+              <div class="salesData salesDataTotal"></div>
+              <div></div>
+              <div></div>
+            </div>
           </div>
         </div>
-        <div class="PPBodyFooter"></div>
+        <div class="PPBodyFooter">
+          <div class="bbfooter DLNum">
+            <p class="cashier dlnums"></p>
+            <p class="DLGrab dlnums"></p>
+            <p class="DLPanda dlnums"></p>
+          </div>
+          <div class="bbfooter note">
+            <p class="notetxt">NOTE:</p>
+            <p class="notetxtMess"></p>
+          </div>
+          <p class="remark">Balanced</p>
+        </div>
       </div>
     </div>
     <div class="legendsDivPop">

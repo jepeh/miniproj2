@@ -1,5 +1,5 @@
 {
- "desais": [
+ "dose": [
     {
                   "date": "January 1",
                     "beg": 100,
@@ -68,36 +68,6 @@
                     "panda": 10,
                     "total": null,
                     "end": 45,
-                    "variant": null,
-                    "grabNum": "GF-123 - GF321",
-                    "pandaNum": "#4564 - #4654", 
-                    "note": "Perfect",
-                    "cashier": "Janina",
-                    "type": "desais"
-                },
-                {
-                  "date": "January 6",
-                    "beg": 95,
-                    "sales": 30,
-                    "grab": 10,
-                    "panda": 10,
-                    "total": null,
-                    "end": 44,
-                    "variant": null,
-                    "grabNum": "GF-123 - GF321",
-                    "pandaNum": "#4564 - #4654", 
-                    "note": "over po isa huhuh",
-                    "cashier": "Vanessa",
-                    "type": "desais"
-                },
-                {
-                  "date": "January 7",
-                    "beg": 94,
-                    "sales": 50,
-                    "grab": 30,
-                    "panda": 14,
-                    "total": null,
-                    "end": 0,
                     "variant": null,
                     "grabNum": "GF-123 - GF321",
                     "pandaNum": "#4564 - #4654", 

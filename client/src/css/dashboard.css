@@ -151,6 +151,7 @@ display: grid;
 grid-template-columns: 30% 70%;
 transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 animation: pop .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+overflow: hidden;
 }
 @keyframes pop {
     from {
@@ -171,7 +172,12 @@ animation: pop .5s cubic-bezier(0.075, 0.82, 0.165, 1);
     font-weight: 10;
     color: rgba(207, 205, 205, 0.712);
     text-align: left;
-    margin-left: 10%;
+    height: 100%;
+    width: 100%;
+    margin-left: 0%;
+    padding-left: 10%;
+    padding-top: 7%;
+    background: linear-gradient(to right,  5%, transparent 80%)
 }
 .cupsInfo {
     width: 100%;
@@ -220,6 +226,56 @@ animation: pop .5s cubic-bezier(0.075, 0.82, 0.165, 1);
     z-index: 2;
     backdrop-filter: blur(4px);
     display: none;
+}
+.addnewpop {
+     position: absolute;
+     width: 50vw;
+   height: 70vh;
+    background-color: rgba(29, 28, 28, 0.522);
+    z-index: 5;
+        backdrop-filter: blur(2px);
+                    margin: auto;
+                    left: 50vw;
+                    margin-left: -25vw;
+                    margin-top: 15vh;
+                    border-radius: 1vw;
+                    animation: pop .5s;
+    display: none;
+    grid-template-rows: 10% 70% 10% 10%
+}
+.addnewpop p {
+    margin: auto;
+    text-align: center;
+}
+.addnewbutton {
+    background-color: rgba(48, 47, 47, 0.733);
+    padding: 5px;
+    width: 15%;
+    border-radius: .5vw;
+    animation: pop .2s;
+}
+.canceladdnew:hover {
+    cursor: pointer;
+}
+.addnewbutton:hover {
+    transform: scale(1.1);
+}
+.addnewdiv{
+width: 100%;
+height: 100%;
+display: grid;
+grid-template-columns: 50% 50%;
+grid-template-rows: 20% 20% 20% 20% 20%;
+}
+.addinputs {
+    margin: auto;
+    width: 70%;
+    height: 70%;
+    background-color: rgba(65, 66, 66, 0.568);
+    border: none;
+    border-radius: .6vw;
+    margin-top: 5%;
+    text-align: center;
 }
 .popUpData {
     position: fixed;
@@ -326,11 +382,12 @@ animation: pop .5s cubic-bezier(0.075, 0.82, 0.165, 1);
  grid-template-columns: 5% 90%;
  overflow: hidden;
 }
+
 .dailyRemarks {
     margin: auto;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 255, 0, 0.241);
+      
 }
 .PPBodyDatesText {
     margin: auto;
@@ -343,6 +400,9 @@ animation: pop .5s cubic-bezier(0.075, 0.82, 0.165, 1);
     background-color: rgba(197, 199, 201, 0.24);
     transform: scale(1.1);
 } 
+.PPBodyDataDatesListDiv.active {
+    background-color: red;
+}
 .PPBodyDataRight {
     margin: auto;
     width: 90%;
@@ -350,7 +410,63 @@ animation: pop .5s cubic-bezier(0.075, 0.82, 0.165, 1);
     background-color: rgba(0, 0, 0, 0.462);
     border-radius: 1vw;
     display: grid;
-    grid-template-rows: 10% 30% 10% 3%; 
+    grid-template-rows: 10% 30% 10% 3% 40%; 
+}
+.PPBodyFooter {
+    width: 100%;
+    height: 100%;
+    
+    display: grid;
+    grid-template-columns: 35% 40% 30%;
+}
+.bbfooter {
+    display: grid;
+    font-size: .8vw;
+    
+    margin: auto;
+    margin-left: 5%;
+    
+}
+.dlnums {
+    color: rgba(255, 255, 255, 0.555);
+}
+.DLNum , .note{
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 20% 20% 20%;
+}
+.note {
+    grid-template-rows: 20% 80%;
+}
+
+.remark {
+  
+  text-align: center;
+  border-radius: 5px;
+  max-width: 50%;
+  max-height: 35%;
+
+  font-size: 1.2vw;
+  font-weight: 1;
+  color: rgba(255, 255, 255, 0.521);
+    
+}
+.DDAnalytics {
+    width: 95%;
+    height: 80%;
+    margin: auto;
+    
+    display: grid;
+    grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
+}
+.salesData {
+    margin: auto;
+margin-bottom: 0%;
+    width: 15%;
+    height: 90%;
+    background-color: rgb(0, 225, 255);
+    border-radius: 3.5px;
+    transition: height 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .DataRightHeaderDate {
     font-size: 1.4vw;
@@ -374,6 +490,7 @@ animation: pop .5s cubic-bezier(0.075, 0.82, 0.165, 1);
     font-size: .8vw;
     font-weight: 200;
     color: rgba(255, 255, 255, 0.541);
+    
 }
 .salesList {
 
@@ -390,5 +507,6 @@ animation: pop .5s cubic-bezier(0.075, 0.82, 0.165, 1);
     height: 5%;
     margin: auto;
     margin-top: -4%;
-    background-color: rgba(255, 251, 251, 0.233);
+    background-color: white;
+    opacity: .2;
 }
