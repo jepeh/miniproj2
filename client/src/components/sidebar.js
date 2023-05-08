@@ -19,7 +19,7 @@ export default class Sidebar extends React.Component {
                     {/* Router , Routes */}
                     <Router>
                         <NavLink className="navlink" exact="true" to="/" onClick={this.refresh}>Home</NavLink>
-                        <NavLink className="navlink" to="/desais" onClick={this.refresh}>Desais - Ice</NavLink>
+                        <NavLink className="navlink" to="/desais" onClick={this.refresh}>DeSais - Ice</NavLink>
                         <NavLink className="navlink" to="/dose" onClick={this.refresh}>Dose - Hot</NavLink>
                         <NavLink className="navlink" to="/weekly" onClick={this.refresh}>Weekly Cups</NavLink>
                         <NavLink className="navlink" to="/docs" onClick={this.refresh}>Documentation</NavLink>
